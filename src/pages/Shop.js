@@ -1,11 +1,9 @@
-import React from 'react'
+import React, {} from 'react'
 
-function Shop() {
+export default function Shop() {
   return (
-    <div>
-      
-    </div>
+    <div>Shop</div>
   )
 }
 
-export default Shop
+// export default Shop;
