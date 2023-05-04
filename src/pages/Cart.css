@@ -6,7 +6,7 @@
     
 }
 .cartItem{
-    width: 500px;
+    width: 700px;
     height: 200px;
     display: flex;
      align-items: center;
@@ -17,4 +17,9 @@
 .cartItem img{
     width: 200px;
 
+}
+.handler input{
+    width: 40px;
+    text-align: center;
+    font-weight: bolder;
 }
