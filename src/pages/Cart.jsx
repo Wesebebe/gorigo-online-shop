@@ -24,6 +24,8 @@ function Cart() {
                         return<CartItem data={item}/>
                     }
                 })}
+
+
             </div>
         </div>
 
