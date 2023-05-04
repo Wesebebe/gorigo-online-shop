@@ -15,7 +15,7 @@ function Shop() {
 
     const List =items.map((item) => {
         return(
-            <Product key={item.id} name={item.name} price={item.price} src={item.src}/>
+            <Product key={item.id} id={item.id} name={item.name} price={item.price} src={item.src}/>
         )
     })
     return (
