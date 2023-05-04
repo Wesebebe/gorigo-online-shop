@@ -7,7 +7,7 @@ export default function Cart() {
   const[items, setItems]= useState([])
 
   useEffect(()=> {
-    fetch("http://localhost:3003/items")
+    fetch("http://localhost:3000/items")
       .then(resp => resp.json())
       .then(items => setItems(items))
   }, []);
@@ -15,18 +15,18 @@ export default function Cart() {
   const{cartItems} = useContext(ShopContext)
 
   return (
-    <div>
-      <div className="cart">
+    <>
+      <div className="heading">
         <h1>Your Cart Items</h1>
       </div>
-      <div className="cartItem">
+      <div className="cart">
         {items.map((item) => {
           if(cartItems[item.id] !== 0){
             return <CartItem data={item}/>
           }
         })}
       </div>
-    </div>
+    </>
   )
 }
 

@@ -11,7 +11,7 @@ const Product = ({id, name, price, src}) => {
       <img src={src} alt={name} />
       <h3>{name}</h3>
       <h6>Ksh.{price}</h6>
-      <button onClick={() => addToCart(id)}>
+      <button onClick={() => addToCart(id)} calssName="ui primary button">
         Add to Cart{cartItemAmount > 0 && <> ({cartItemAmount})</>}
       </button>
     </div>

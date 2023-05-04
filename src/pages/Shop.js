@@ -8,7 +8,7 @@ export default function Shop() {
   const[items, setItems]= useState([])
 
   useEffect(()=> {
-    fetch("http://localhost:3003/items")
+    fetch("http://localhost:3000/items")
       .then(resp => resp.json())
       .then(items => setItems(items))
   }, []);
@@ -18,10 +18,15 @@ export default function Shop() {
   })
 
   return (
-    <div className="products">
+    <div>
+      <h1 className='heading'>GORIGO ONLINE SHOP</h1>
+      <div className="products">
       {list}
+      </div>
     </div>
   )
 }
+
+// export const iteminfo = items.find((item) => item.id === Number(item));
 
 // export default Shop;

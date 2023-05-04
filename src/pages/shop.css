@@ -1,3 +1,4 @@
+
 .products{
     width: 100%;
     height: auto;
@@ -6,7 +7,7 @@
     place-items: center;
 }
 
-.product {
+/* .product {
     border-radius: 15px;
     width: 300px;
     height: 50%;
@@ -15,9 +16,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .product img {
     width: 400px;
     /* height:auto; */
+}
+
+.heading{
+    text-align:center;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-top: 10px;
 }
