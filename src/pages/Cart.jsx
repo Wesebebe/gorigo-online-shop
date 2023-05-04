@@ -1,18 +1,27 @@
-import React, { useContext } from "react";
-import {ShopContext} from './context/ShopContext';
+import React, { useContext, useEffect, useState } from "react";
+import {ShopContext} from '../context/ShopContext';
 import CartItem from "./CartItem";
+import './Cart.css';
 
 function Cart() {
-    const {cartItems, items} =useContext(ShopContext);
+   const [items, setItems] =useState([])
+   const {cartItems} =useContext(ShopContext);
+    useEffect(()=>{
+        fetch ('http://localhost:3001/items')
+        .then((resp) => resp.json())
+        .then((items) => setItems(items))
+
+    }, []);
+
     return(
 
     <div className="Cart">
         <div>
             <h1>Your Cart Items</h1>
             <div className="cartItems">
-                {items.map((items) => {
-                    if(cartItems(items.id) !==0){
-                        return<CartItem data={items}/>
+                {items.map((item) => {
+                    if(cartItems[item.id] !==0){
+                        return<CartItem data={item}/>
                     }
                 })}
             </div>
