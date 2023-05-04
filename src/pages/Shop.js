@@ -3,17 +3,18 @@ import Product from '../components/Product';
 import "./shop.css";
 
 
+
 export default function Shop() {
   const[items, setItems]= useState([])
 
   useEffect(()=> {
-    fetch("http://localhost:3005/items")
+    fetch("http://localhost:3003/items")
       .then(resp => resp.json())
       .then(items => setItems(items))
   }, []);
 
   const list = items.map((item) => {
-    return < div className="products">< Product key={item.id} name={item.name} src={item.src} price={item.price}/></div>
+    return < div className="products">< Product key={item.id} id={item.id} name={item.name} src={item.src} price={item.price}/></div>
   })
 
   return (
