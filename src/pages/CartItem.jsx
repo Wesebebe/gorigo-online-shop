@@ -10,9 +10,9 @@ function CartItem(props) {
       <img src={src} alt={name}/>
       <p> <b>{name}</b></p>
       <p> <b>Ksh.{price}</b></p>
-      <div className='countHandler'>
+      <div>
         <button onClick={() => removeFromCart(id)}> - </button>
-        <input className='countHandler' value={cartItems[id]} onChange={(e) => updateCartItemCount(Number(e.target.value), id) }/>
+        <input  value={cartItems[id]} onChange={(e) => updateCartItemCount(Number(e.target.value), id)}/>
         <button onClick={() => addToCart(id)}> + </button>
       </div>
       

@@ -1,4 +1,4 @@
-.products{
+.items{
     width: 100%;
     height: auto;
     display: grid;
@@ -6,7 +6,7 @@
     place-items: center;
 }
 
-.product{
+.item{
     border-radius: 15px;
     width: 300px;
     height: 50%;
@@ -16,7 +16,12 @@
     justify-content: center;
     align-items: center;
 }
-.product img{
+.item img{
     width: 400px;
     
+}
+.shopTitle{
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
 }

@@ -21,13 +21,13 @@ function Shop() {
     return (
         <div className="shop">
             <div className="shopTitle">
-                <h1>GORIGO Shop</h1>
+                <h1>GORIGO ONLINE SHOP </h1>
             </div>
 
-        <div className="products">
-            {List}
+            <div className="items">
+                 {List}
             </div>
-            </div>
+        </div>
     )
 }
 

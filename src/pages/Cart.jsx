@@ -15,10 +15,10 @@ function Cart() {
 
     return(
 
-    <div className="Cart">
+    <div className="heading">
         <div>
             <h1>Your Cart Items</h1>
-            <div className="cartItems">
+            <div className="cart">
                 {items.map((item) => {
                     if(cartItems[item.id] !==0){
                         return<CartItem data={item}/>
